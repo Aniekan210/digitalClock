@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TimeMode
+comment0.text=\r\n\ A\ class\ that\ shows\ the\ digital\ clock's\ time\ mode\r\n\r\n\ @author\ Aniekan\ Ekarika\r\n
+comment1.params=
+comment1.target=TimeMode()
+comment2.params=
+comment2.target=void\ run()
+numComments=3

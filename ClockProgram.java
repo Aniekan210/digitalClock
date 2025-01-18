@@ -8,19 +8,24 @@ public class ClockProgram
     protected int hours;
     protected int minutes;
     protected int seconds;
+    protected int deciSec;
     protected boolean isPm;
     
-    public ClockProgram(int hours, int minutes, int seconds, boolean isPm)
+    public ClockProgram(int hours, int minutes, int seconds, int desiSec)
     {
-        this.hours = hours;
+        this.hours = hours % 12;
+        if (this.hours == 0) {
+            this.hours = 12;
+        }
         this.minutes = minutes;
         this.seconds = seconds;
-        this.isPm = isPm;
+        this.deciSec = desiSec;
+        this.isPm = hours >= 12;
     }
     
     public ClockProgram()
     {
-        this(12,0,0,false);
+        this(0,0,0,0);
     }
     
     public boolean getIsPm() { return isPm; }
@@ -31,9 +36,15 @@ public class ClockProgram
     
     public int getSeconds() { return seconds; }
     
+    public int getDeciSecs() { return deciSec; }
+    
     public void inc()
     {
-        seconds = seconds + 1;
+        deciSec = deciSec + 1;
+        if(deciSec == 10)
+        {
+            seconds = seconds + 1;
+        }
         if (seconds == 60)
         {
             seconds = 0;
