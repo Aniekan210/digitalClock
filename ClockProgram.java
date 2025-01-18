@@ -11,6 +11,11 @@ public class ClockProgram
     protected int deciSec;
     protected boolean isPm;
     
+    public ClockProgram(int hours, int minutes, int seconds)
+    {
+        this(hours,minutes,seconds,0);
+    }
+    
     public ClockProgram(int hours, int minutes, int seconds, int desiSec)
     {
         this.hours = hours % 12;
@@ -38,13 +43,9 @@ public class ClockProgram
     
     public int getDeciSecs() { return deciSec; }
     
-    public void inc()
+    public void incSec()
     {
-        deciSec = deciSec + 1;
-        if(deciSec == 10)
-        {
-            seconds = seconds + 1;
-        }
+        seconds = seconds + 1;
         if (seconds == 60)
         {
             seconds = 0;

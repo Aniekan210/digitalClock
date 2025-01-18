@@ -12,7 +12,7 @@ public class TimeMode extends Pane
     public TimeMode()
     {
         LocalTime now = LocalTime.now();
-        ClockProgram time = new ClockProgram(now.getHour(),now.getMinute(),now.getSecond(),now.getNano() / 100_000_000);
+        ClockProgram time = new ClockProgram(now.getHour(),now.getMinute(),now.getSecond());
         ClockFrame clock = new ClockFrame(20,20);
         PmIndicator indicator = new PmIndicator(480,35);
         
@@ -22,7 +22,7 @@ public class TimeMode extends Pane
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                time.inc();
+                time.incSec();
                 int hours = time.getHours();
                 int minutes = time.getMinutes();
                 int seconds =  time.getSeconds();
@@ -31,6 +31,6 @@ public class TimeMode extends Pane
                 indicator.setIsPm(isPm);
             }
         };
-        timer.scheduleAtFixedRate(task, 0, 100);
+        timer.scheduleAtFixedRate(task, 0, 1000);
     }
 }
