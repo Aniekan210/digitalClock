@@ -14,7 +14,7 @@ public class DigitalClock extends Application {
     @Override
     public void start(Stage primaryStage) 
     {
-        ClockProgram time = new ClockProgram(3,10,15,true);
+        ClockProgram time = new ClockProgram(7,11,0,false);
         ClockFrame clock = new ClockFrame(20,20);
         PmIndicator indicator = new PmIndicator(480,35);
         
