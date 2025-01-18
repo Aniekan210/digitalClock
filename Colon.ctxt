@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Colon
+comment0.text=\r\n\ A\ class\ that\ is\ a\ colon\ between\ the\ numbers\r\n\r\n\ @author\ Aniekan\ Ekarika\r\n
+comment1.params=x\ y
+comment1.target=Colon(double,\ double)
+comment2.params=
+comment2.target=void\ drawColon()
+numComments=3

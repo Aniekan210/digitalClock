@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=DigitalLine
+comment0.text=\r\n\ Class\ for\ a\ singular\ digital\ line\r\n\r\n\ @author\ Aniekan\ Ekarika\r\n
+comment1.params=x\ y\ width\ height
+comment1.target=DigitalLine(double,\ double,\ double,\ double)
+comment2.params=value
+comment2.target=void\ setIsOn(boolean)
+comment3.params=
+comment3.target=void\ drawLine()
+numComments=4

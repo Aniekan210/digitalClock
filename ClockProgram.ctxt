@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ClockProgram
+comment0.text=\r\n\ Clock\ program\r\n\r\n\ @author\ Aniekan\ Ekarika\r\n
+comment1.params=hours\ minutes\ seconds\ isPm
+comment1.target=ClockProgram(int,\ int,\ int,\ boolean)
+comment2.params=
+comment2.target=ClockProgram()
+comment3.params=
+comment3.target=boolean\ getIsPm()
+comment4.params=
+comment4.target=int\ getHours()
+comment5.params=
+comment5.target=int\ getMinutes()
+comment6.params=
+comment6.target=int\ getSeconds()
+comment7.params=
+comment7.target=void\ inc()
+numComments=8

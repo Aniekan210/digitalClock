@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ClockFrame
+comment0.text=\r\n\ A\ class\ that\ acts\ as\ the\ clock\ layout\ and\ controller\r\n\r\n\ @author\ Aniekan\ Ekarika\r\n
+comment1.params=x\ y
+comment1.target=ClockFrame(double,\ double)
+comment2.params=
+comment2.target=void\ drawClock()
+comment3.params=hours\ minutes\ seconds
+comment3.target=void\ setTime(int,\ int,\ int)
+numComments=4
