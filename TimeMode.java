@@ -9,15 +9,28 @@ import java.time.LocalTime;
  */
 public class TimeMode extends Pane
 {
+    protected LocalTime now;
+    protected ClockProgram time;
+    protected PmIndicator indicator;
+    protected ClockFrame clock;
+    
     public TimeMode()
     {
-        LocalTime now = LocalTime.now();
-        ClockProgram time = new ClockProgram(now.getHour(),now.getMinute(),now.getSecond());
-        ClockFrame clock = new ClockFrame(20,20);
-        PmIndicator indicator = new PmIndicator(480,35);
-        
+        start();
+    }
+    
+    private void drawMode()
+    {
+        time = new ClockProgram(now.getHour(),now.getMinute(),now.getSecond());
+        clock = new ClockFrame(20,20);
+        indicator = new PmIndicator(480,35);
         this.getChildren().addAll(clock, indicator);
+    }
         
+    public void start()
+    {
+        now = LocalTime.now();
+        drawMode();
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
             @Override

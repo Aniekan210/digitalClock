@@ -12,16 +12,16 @@ public class DigitalClock extends Application {
     @Override
     public void start(Stage primaryStage) 
     {
-        TimeMode time = new TimeMode();
+        Frame frame = new Frame();
         
         Pane root = new Pane();
         root.setStyle("-fx-background-color: black;");
-        root.getChildren().addAll(time);
+        root.getChildren().addAll(frame);
 
         Scene scene = new Scene(root, 535, 140);
 
         primaryStage.setTitle("DigitalClock");
-        primaryStage.setResizable(false);
+        //primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
